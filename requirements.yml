@@ -1,0 +1,17 @@
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - einops
+  - hydra-core
+  - numpy
+  - opacus
+  - scikit-image
+  - pytorch=1.13.1=*cuda*
+  - pytorch-cuda=11.7
+  - torchvision
+  - torch-ema
+  - tqdm
+    
+    

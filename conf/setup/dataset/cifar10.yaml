@@ -1,0 +1,7 @@
+func:
+  _target_: torchvision.datasets.CIFAR10
+  root: "."
+name: CIFAR10
+image_size: 32
+train_subset: 0.9   # portion of the train set actually used for training
+val_subset: 0.1   # portion of the train set used for validation

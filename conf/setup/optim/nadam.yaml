@@ -1,0 +1,6 @@
+optimizer:
+  _target_: torch.optim.NAdam
+  lr: 0.01
+name: "nadam"
+lr_reduceonplateau: True
+reduction: "mean"

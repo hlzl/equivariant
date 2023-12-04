@@ -1,0 +1,7 @@
+optimizer:
+  _target_: torch.optim.SGD
+  lr: 2
+name: "sgd"
+lr_reduceonplateau: False
+lr_patience: 10
+reduction: "mean"

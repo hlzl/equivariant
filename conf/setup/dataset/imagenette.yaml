@@ -1,0 +1,5 @@
+name: "imagenette"
+path: "./imagenette-160"
+image_size: 160
+train_subset: 0.9   # portion of the train set actually used for training
+val_subset: 0.1   # portion of the train set used for validation

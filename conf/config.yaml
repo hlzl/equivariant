@@ -1,0 +1,13 @@
+# To run the training script properly, choose or create a setup config.
+
+# The setup config includes the corresponding optimizer, dataset and network.
+# All DP and training hyperparameters are also set in the setup config.
+
+defaults:
+  - setup: eqresnet9-cifar10
+  - _self_
+
+hardware:
+  deterministic: False
+  bs_physical: 2048
+  num_workers: 8
