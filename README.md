@@ -1,6 +1,6 @@
 <h1 align='center'>equivariant</h1>
 
-This repository contains the implementation for the ACM AISec '23 paper [Equivariant Differentially Private Deep Learning: Why DP-SGD Needs Sparser Models](https://doi.org/10.1145/3605764.3623902).
+This repository contains the implementation for the ACM AISec '23 paper [Equivariant Differentially Private Deep Learning: Why DP-SGD Needs Sparser Models](https://doi.org/10.1145/3605764.3623902). It is a fork of the great [escnn](https://github.com/QUVA-Lab/escnn) repository.
 
 ## Installation
 We recommend [mamba](https://mamba.readthedocs.io/en/latest/user_guide/mamba.html) to manage packages. You can create an environment and install all necessary packages with:
