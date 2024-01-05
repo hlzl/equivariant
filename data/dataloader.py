@@ -1,3 +1,4 @@
+import os
 import hydra
 import torch
 from torchvision.transforms import (
@@ -18,12 +19,8 @@ class CustomDataloader:
         Supported datasets:
         - CIFAR-10
         - CIFAR-100
-        - MedMNIST
         - TinyImageNet
         - ImageNette
-        - ImageNet32
-        - ImageNet
-        - RadImageNet
         """
         self.num_workers = cfg.hardware.num_workers
         # Set augmentation multiplicity to 1 (no augmentations) if not specified
@@ -36,6 +33,7 @@ class CustomDataloader:
         if "CIFAR" in cfg.setup.dataset.name:
             self.train_ds = hydra.utils.instantiate(
                 cfg.setup.dataset.func,
+                root=os.path.dirname(os.path.abspath(__file__)),
                 train=True,
                 download=True,
                 transform=Compose(
@@ -48,6 +46,7 @@ class CustomDataloader:
             )
             self.val_ds = hydra.utils.instantiate(
                 cfg.setup.dataset.func,
+                root=os.path.dirname(os.path.abspath(__file__)),
                 train=(False if cfg.setup.dataset.val_subset == 0.0 else True),
                 transform=Compose(
                     [
@@ -60,6 +59,7 @@ class CustomDataloader:
 
             self.test_ds = hydra.utils.instantiate(
                 cfg.setup.dataset.func,
+                root=os.path.dirname(os.path.abspath(__file__)),
                 train=False,
                 download=True,
                 transform=Compose(

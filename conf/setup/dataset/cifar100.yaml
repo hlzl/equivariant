@@ -1,6 +1,5 @@
 func:
   _target_: torchvision.datasets.CIFAR100
-  root: "."
 name: CIFAR100
 image_size: 32
 train_subset: 0.9   # portion of the train set actually used for training
