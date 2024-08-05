@@ -17,4 +17,4 @@ class AugMult:
 
     def de_et_al(self, x):
         "Augmentation multiplicity according to De et al. (2022)."
-        return torch.stack([x] + [self.random_flip(self.random_crop(x))] * self.k)
+        return torch.stack([x] + [self.random_flip(self.random_crop(x)) for _ in range(self.k)])
